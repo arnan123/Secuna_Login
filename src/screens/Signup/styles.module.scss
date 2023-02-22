@@ -1,0 +1,41 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  .form-container {
+    border-width: 1px;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px gray;
+    padding: 2rem;
+    margin-bottom: auto;
+    margin-top: 10rem;
+    justify-content: center;
+    background-color: whitesmoke;
+    .tabs {
+      width: 30vw;
+      @media only screen and (max-width: 1000px) {
+        width: 70vw;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        .form-button {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.qr-modal-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}

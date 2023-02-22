@@ -1,0 +1,31 @@
+.qr-modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  @media only screen and (max-width: 500px) {
+    width: 70vw;
+  }
+  .qr {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    align-content: flex-start;
+    width: 20rem;
+    justify-content: center;
+    @media only screen and (max-width: 500px) {
+      width: 70vw;
+    }
+    .input {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .submit-button {
+    display: flex;
+    margin-left: 20rem;
+    @media only screen and (max-width: 500px) {
+      margin-left: 0;
+    }
+  }
+}
