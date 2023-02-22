@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import style from './styles.module.scss';
 import {
   Space,
@@ -13,7 +13,6 @@ import {
 import axios from 'axios';
 import { UserInterface } from '../../interfaces/UserInteface';
 import { useCookies } from 'react-cookie';
-import { useNavigate } from 'react-router-dom';
 import { TwoFAInterface } from '../../interfaces/2FAInterface';
 import QRModal from './QRModal';
 
@@ -32,14 +31,9 @@ function LoginScreen() {
   const [signInform] = Form.useForm();
   const [defaultActiveKey, setDefaultActiveKey] =
     useState<string>('1');
-  const navigate = useNavigate();
+    
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-    useEffect(() => {
-      if(cookies['login-token']){
-          navigate('/Home', { replace: true });
-      }
-    }, [cookies])
 
   const onSubmit = () => {
     if (signupData.password !== signupData.password_confirmation) {
