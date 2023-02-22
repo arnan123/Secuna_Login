@@ -42,6 +42,9 @@ function HomeScreen() {
       );
       setReports(response.data.reports);
     } catch (err) {
+      notification.error({
+        message: 'Error in fetching reports.Please Login again',
+      });
       console.log(err);
     }
   };
@@ -67,6 +70,9 @@ function HomeScreen() {
       });
       setReports(response.data.reports);
     } catch (err) {
+      notification.error({
+        message: 'Error in deleting report.Please Login again',
+      });
       console.log(err);
     }
   };

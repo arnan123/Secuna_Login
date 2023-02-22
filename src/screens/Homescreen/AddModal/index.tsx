@@ -38,6 +38,11 @@ function AddModal({
         setRefresh(!isRefresh);
         setReport({} as ReportInterface);
         form.resetFields();
+      })
+      .catch((err) => {
+        notification.error({
+          message: 'Error in adding report.Please Login again',
+        });
       });
   };
 
